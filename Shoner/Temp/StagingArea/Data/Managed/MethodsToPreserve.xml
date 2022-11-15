@@ -1,0 +1,17 @@
+<linker>
+	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+		</type>
+	</assembly>
+	<assembly fullname="Vuforia.Unity.Engine" ignoreIfMissing="1">
+		<type fullname="Vuforia.ContentPositioningBehaviour">
+			<method name="PositionContentAtPlaneAnchor"/>
+		</type>
+		<type fullname="Vuforia.PlaneFinderBehaviour">
+			<method name="PerformHitTest"/>
+		</type>
+	</assembly>
+</linker>
