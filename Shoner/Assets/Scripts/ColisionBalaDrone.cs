@@ -4,24 +4,19 @@ using UnityEngine;
 
 public class ColisionBalaDrone : MonoBehaviour
 {
+
+    ParticulasDestruccion particulasDestruccion;
     // Start is called before the first frame update
     void Start()
     {
-        
+        particulasDestruccion = ParticulasDestruccion.Instance;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Drone")
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
+        particulasDestruccion.generarParticulas(particulasDestruccion.particulas, other.gameObject.transform);
+        other.gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

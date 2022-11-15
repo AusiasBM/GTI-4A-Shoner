@@ -9,7 +9,7 @@ public class CrearDron : MonoBehaviour
 
     public bool activo = true;
 
-    public float radioEsferaCreacion = 50f;
+    public float radioEsferaCreacion = 75f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +26,14 @@ public class CrearDron : MonoBehaviour
         // Definimos la posición random desde la que saldrá
         // Random.onUnitSphere * rangoCreacion elige un punto dentro de una esfera (rangoCreación es el radio de la esfera)
         pos = transform.position + Random.onUnitSphere * radioEsferaCreacion;
+        
 
         GameObject obj = pool.chooseDrone();
         if (obj != null)
         {
-            pos = new Vector3(pos.x, pos.y, transform.position.z + 50f);
+            pos = new Vector3(pos.x, pos.y, pos.z + 75f);
             obj.transform.position = pos;
+            obj.transform.parent = transform;
         }
         
 
