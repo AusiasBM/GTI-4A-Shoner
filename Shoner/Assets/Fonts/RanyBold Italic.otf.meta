@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: ce6b4d845f9b7934390402e0ffe5b2ea
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Rany
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: c39131f14e2dca7438ce001b17bf3df4, type: 3}
+  - {fileID: 12800000, guid: 62f55cf6a7acca447bd5df326e12508c, type: 3}
+  - {fileID: 12800000, guid: 9953e513551cec544af889e1ac18eb30, type: 3}
+  - {fileID: 12800000, guid: d045032e80dcbc14a848111bbed0ffac, type: 3}
+  - {fileID: 12800000, guid: 4378caccf75a0fa4680f3e367371fe1c, type: 3}
+  - {fileID: 12800000, guid: f4ef6d2d30424c74db9abb0e45a9f05a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
