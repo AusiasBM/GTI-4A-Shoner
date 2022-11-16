@@ -15,12 +15,12 @@ public class Disparar : MonoBehaviour
 
     void Start()
     {
-        btnDisparar.onClick.AddListener(DispararBala);  
-        ScoreCounter.Instance.StartCounter();   
+        btnDisparar.onClick.AddListener(DispararBala);   
     }
 
     void DispararBala()
     {
+        ScoreCounter.Instance.StartCounter();  
         //Crear Bala
         GameObject bala = Instantiate(BalaPrefab);
         //Posicion de la bala

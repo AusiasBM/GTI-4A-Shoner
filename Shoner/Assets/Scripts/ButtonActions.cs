@@ -8,7 +8,8 @@ public class ButtonActions : MonoBehaviour
     
     public void StartGame()
     {
-        SceneManager.LoadScene("Escena juego", LoadSceneMode.Additive); // Cambiar InitialScene por la que toque
+        SceneManager.LoadScene("Escena juego");
+        ScoreCounter.Instance.Stop();
     }
 
     public void OpenGithub()

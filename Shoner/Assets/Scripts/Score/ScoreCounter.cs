@@ -12,6 +12,7 @@ public class ScoreCounter : MonoBehaviour
     public bool Running = false;
     private float timer = 0.0f;
     private int secs;
+    public bool end = false;
     
     private void Awake()
     {
@@ -27,13 +28,24 @@ public class ScoreCounter : MonoBehaviour
     {
         this.Score += 1;
     }
+
     public void StartCounter()
     {
-        if (!this.Running) {
+        if (this.end || !this.Running) {
+            this.end = false;
             this.Seconds = 30;
             this.Score = 0;
             this.Running = true;
+            timer = 0.0f;
         }
+    }
+
+    public void Stop()
+    {
+        this.Running = false;
+        this.Score = 0;
+        this.Seconds = 30;
+        timer = 0.0f;
     }
 
     void Update()
@@ -47,9 +59,10 @@ public class ScoreCounter : MonoBehaviour
 
         if (this.Seconds <= 0) this.Running = false;
 
-        if (!this.Running && this.Seconds <= 0) 
+        if (!this.Running && this.Seconds <= 0 && !this.end) 
         {
-            SceneManager.LoadScene("EndScene", LoadSceneMode.Additive); 
+            this.end = true;
+            SceneManager.LoadScene("EndScene"); 
         }
     }
 }
