@@ -9,14 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6172255373053093697}
-<<<<<<< HEAD
   - component: {fileID: 4830130504225821627}
   - component: {fileID: 767122385301626239}
   - component: {fileID: 974632113623171393}
   - component: {fileID: 3288124032726934835}
   - component: {fileID: 4189257089382623333}
-=======
->>>>>>> main
   m_Layer: 0
   m_Name: Prefab_robot_scout_rockie
   m_TagString: Drone
@@ -40,7 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!95 &4830130504225821627
 Animator:
   serializedVersion: 4
@@ -4870,8 +4866,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
-=======
->>>>>>> main
 --- !u!1001 &1251249081310282184
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,14 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8276333495336162514}
-<<<<<<< HEAD
   - component: {fileID: 5207734819416941802}
   - component: {fileID: 835959504858033882}
   - component: {fileID: 6364115737350358307}
   - component: {fileID: -8351150084618321542}
   - component: {fileID: 6003436041795487210}
-=======
->>>>>>> main
   m_Layer: 0
   m_Name: Prefab_robot_guardian
   m_TagString: Drone
@@ -40,7 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!95 &5207734819416941802
 Animator:
   serializedVersion: 4
@@ -4869,8 +4865,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
-=======
->>>>>>> main
 --- !u!1001 &3795044240150155710
 PrefabInstance:
   m_ObjectHideFlags: 0

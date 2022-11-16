@@ -9,14 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1904175272119034801}
-<<<<<<< HEAD
   - component: {fileID: 6702436101760224952}
   - component: {fileID: 5086963595477948339}
   - component: {fileID: 5746745037571505255}
   - component: {fileID: -4729590916975866838}
   - component: {fileID: -5816311604094021773}
-=======
->>>>>>> main
   m_Layer: 0
   m_Name: Prefab_robot_collector
   m_TagString: Drone
@@ -40,7 +37,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!65 &6702436101760224952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4927,8 +4923,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
-=======
->>>>>>> main
 --- !u!1001 &4795689000028437084
 PrefabInstance:
   m_ObjectHideFlags: 0
