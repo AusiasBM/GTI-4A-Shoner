@@ -29,9 +29,11 @@ public class ScoreCounter : MonoBehaviour
     }
     public void StartCounter()
     {
-        this.Seconds = 30;
-        this.Score = 0;
-        this.Running = true;
+        if (!this.Running) {
+            this.Seconds = 30;
+            this.Score = 0;
+            this.Running = true;
+        }
     }
 
     void Update()
@@ -47,7 +49,7 @@ public class ScoreCounter : MonoBehaviour
 
         if (!this.Running && this.Seconds <= 0) 
         {
-            SceneManager.LoadScene("InitialScene", LoadSceneMode.Additive); 
+            SceneManager.LoadScene("EndScene", LoadSceneMode.Additive); 
         }
     }
 }

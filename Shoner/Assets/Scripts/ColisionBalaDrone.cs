@@ -15,6 +15,7 @@ public class ColisionBalaDrone : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        ScoreCounter.Instance.IncreaseScore();
         particulasDestruccion.generarParticulas(particulasDestruccion.particulas, other.gameObject.transform);
         other.gameObject.transform.parent.gameObject.SetActive(false);
         Destroy(gameObject);

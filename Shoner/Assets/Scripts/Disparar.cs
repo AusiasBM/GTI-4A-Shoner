@@ -15,7 +15,8 @@ public class Disparar : MonoBehaviour
 
     void Start()
     {
-        btnDisparar.onClick.AddListener(DispararBala);     
+        btnDisparar.onClick.AddListener(DispararBala);  
+        ScoreCounter.Instance.StartCounter();   
     }
 
     void DispararBala()
