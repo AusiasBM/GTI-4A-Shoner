@@ -9,7 +9,6 @@ public class ButtonActions : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Escena juego");
-        ScoreCounter.Instance.Stop();
     }
 
     public void OpenGithub()

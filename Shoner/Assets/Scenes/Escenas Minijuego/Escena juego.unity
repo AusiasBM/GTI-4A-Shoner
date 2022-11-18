@@ -2016,6 +2016,7 @@ MonoBehaviour:
   Score: 0
   Seconds: 30
   Running: 0
+  end: 0
 --- !u!4 &1726959267
 Transform:
   m_ObjectHideFlags: 0
@@ -2153,6 +2154,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766956444}
   m_CullTransparentMesh: 1
+--- !u!1 &1822170266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1822170268}
+  - component: {fileID: 1822170267}
+  m_Layer: 0
+  m_Name: TimeController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1822170267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822170266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 629236235c101f94e859dc02d5bf27d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planeFinder: {fileID: 591007152}
+--- !u!4 &1822170268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822170266}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2068260845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,7 +2492,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd4eb033b681ad4fb60ac50ccd19a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particulas: {fileID: 5456908645196226026, guid: 10f4caeaa3bb89d4a958bdab8f7a920c, type: 3}
+  particulas:
+  - {fileID: 5456908645196226026, guid: 10f4caeaa3bb89d4a958bdab8f7a920c, type: 3}
+  - {fileID: 5456908645196226026, guid: 78655d57eee5970409f9c38da71a7c31, type: 3}
 --- !u!4 &2101767623
 Transform:
   m_ObjectHideFlags: 0

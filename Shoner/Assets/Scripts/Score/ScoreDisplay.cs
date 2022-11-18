@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScoreDisplay : MonoBehaviour
 {
@@ -10,7 +11,15 @@ public class ScoreDisplay : MonoBehaviour
 
     void Update()
     {
-        scoreText.text = ScoreCounter.Instance.Score.ToString();
+        if(SceneManager.GetActiveScene().name == "EndScene")
+        {
+            scoreText.text = PlayerPrefs.GetInt("score").ToString();
+        }
+        else
+        {
+            scoreText.text = ScoreCounter.Instance.Score.ToString();
+        }
+        
     }
 
 }

@@ -10,7 +10,8 @@ public class TimeDisplay : MonoBehaviour
 
     void Update()
     {
-        timeText.text = ScoreCounter.Instance.Seconds.ToString();
+        /**/
+        timeText.text = ScoreCounter.Instance.Timer.ToString("f0");
     }
 
 }

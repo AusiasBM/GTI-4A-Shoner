@@ -5,64 +5,57 @@ using UnityEngine.SceneManagement;
 
 public class ScoreCounter : MonoBehaviour
 {
-    public static ScoreCounter Instance;
+    private static ScoreCounter instance;
+    public static ScoreCounter Instance { get => instance; }
 
     public int Score = 0;
     public int Seconds = 30;
     public bool Running = false;
     private float timer = 0.0f;
-    private int secs;
-    public bool end = false;
+    /**/
+    public float Timer { get { return timer; } }
     
     private void Awake()
     {
-        if (Instance == null) {
+        if (Instance == null)
+        {
             DontDestroyOnLoad(gameObject);
-            Instance = this;
-        } else {
+            instance = this;
+            this.transform.gameObject.SetActive(false);
+            timer = (float)Seconds;
+            
+        }
+        else
+        {
             Destroy(gameObject);
         }
+        
     }
-
+    /**/
+    void Start()
+    {
+    }
     public void IncreaseScore()
     {
         this.Score += 1;
     }
 
-    public void StartCounter()
+    public void OnDisable()
     {
-        if (this.end || !this.Running) {
-            this.end = false;
-            this.Seconds = 30;
-            this.Score = 0;
-            this.Running = true;
-            timer = 0.0f;
-        }
-    }
-
-    public void Stop()
-    {
-        this.Running = false;
         this.Score = 0;
-        this.Seconds = 30;
-        timer = 0.0f;
     }
 
     void Update()
     {
-        if (this.Running) 
+        timer -= Time.deltaTime;
+        
+        if (this.timer <= 0)
         {
-            timer += Time.deltaTime;
-            secs = (int)(timer % 60);
-            this.Seconds = 30 - secs;
-        }
-
-        if (this.Seconds <= 0) this.Running = false;
-
-        if (!this.Running && this.Seconds <= 0 && !this.end) 
-        {
-            this.end = true;
-            SceneManager.LoadScene("EndScene"); 
+            Debug.Log("Finaaaal");
+            timer = (float)Seconds;
+            PlayerPrefs.SetInt("score", Score);
+            this.gameObject.SetActive(false);
+            SceneManager.LoadScene("EndScene");
         }
     }
 }

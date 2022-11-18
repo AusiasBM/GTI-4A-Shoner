@@ -19,8 +19,7 @@ public class Disparar : MonoBehaviour
     }
 
     void DispararBala()
-    {
-        ScoreCounter.Instance.StartCounter();  
+    {  
         //Crear Bala
         GameObject bala = Instantiate(BalaPrefab);
         //Posicion de la bala
