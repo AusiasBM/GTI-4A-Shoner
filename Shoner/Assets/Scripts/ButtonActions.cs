@@ -8,6 +8,7 @@ public class ButtonActions : MonoBehaviour
     
     public void StartGame()
     {
+        Debug.Log("ffgdfg");
         SceneManager.LoadScene("Escena juego");
     }
 

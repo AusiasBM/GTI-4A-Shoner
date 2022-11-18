@@ -31,7 +31,8 @@ public class CrearDron : MonoBehaviour
         GameObject obj = pool.chooseDrone();
         if (obj != null)
         {
-            pos = new Vector3(pos.x, pos.y, pos.z + 75f);
+            //Alejamos la creación de los drones en la posición Z por las animaciones
+            pos = new Vector3(pos.x, pos.y-20, pos.z + 75f);
             obj.transform.position = pos;
             obj.transform.parent = transform;
         }
